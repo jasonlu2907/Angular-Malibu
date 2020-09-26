@@ -7,11 +7,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: Opensans;
 }
 
 ///////////////////////
 // LOGO
-
 .logo {
   height: 3.25rem;
 }
@@ -126,5 +126,7 @@
 
   &__user-name {
     margin-left: 2rem;
+    font-weight: 600;
   }
 }
+
