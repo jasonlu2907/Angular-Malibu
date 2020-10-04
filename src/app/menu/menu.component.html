@@ -30,12 +30,12 @@
       <mat-grid-tile *ngFor="let dish of dishes" (click)="onSelectDish(dish)">
         <img height="200px" src={{dish.image}} alt={{dish.name}}>
         <mat-grid-tile-footer>
-          <h1>{{dish.name | uppercase}}</h1>
+          <h1>{{ dish.name | uppercase }}</h1>
         </mat-grid-tile-footer>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
-  
+
   <div class="detail" *ngIf="selectedDish">
     <div class="detail__duma">
       <img class="detail__img" src={{selectedDish.image}} alt={{selectedDish.name}}>
@@ -45,11 +45,26 @@
         <button class="button">BACK</button>
       </div>
     </div>
-    
-    <div class="detail__specific">
-      <h3>Wassup</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, esse perferendis quod hic provident porro, temporibus assumenda totam ipsam, quae asperiores error sapiente quia! Quidem sit placeat enim dignissimos perspiciatis?</p>
+
+    <div class="detail__specific" fxFlex>
+      <!-- <mat-list>
+        <mat-list-item *ngFor="let dish of dishes">
+          <img matListAvatar src={{dish.image}} alt={{dish.name}}>
+          <h1 matLine> {{dish.name}} </h1>
+          <p matLine>
+            <span> {{dish.description}} </span>
+          </p>
+        </mat-list-item>
+      </mat-list>     -->
+      <h1>Comments</h1>
+      <mat-list>
+        <mat-list-item *ngFor="let cmt of selectedDish.comments">
+          <p matLine>{{ cmt.rating }}</p>
+          <p matLine>{{ cmt.comment }}</p>
+          <p matLine>{{ cmt.author }}</p>
+          <p matLine>{{ cmt.date | date }}</p>
+        </mat-list-item>
+      </mat-list>
     </div>
   </div>
-
 </div>
