@@ -11,6 +11,7 @@ import { DishService } from '../services/dish.service';
 })
 export class MenuComponent implements OnInit {
   dishes: Dish[];
+  selectedDish: Dish;
 
   constructor(private dishService: DishService) { }
 
@@ -19,5 +20,7 @@ export class MenuComponent implements OnInit {
       .subscribe(dishes => this.dishes = dishes);
   }
 
-  
+  onSelectDish() {
+    window.alert('Du ma may');
+  }
 }

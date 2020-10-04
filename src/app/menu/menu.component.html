@@ -15,17 +15,41 @@
 </div> -->
 
 <div class="container"
-    fxLayout="column"
-    fxLayoutGap="10px">
+  fxLayout="column"
+  fxLayoutGap="10px">
 
-  <mat-list fxFlex>
-    <mat-list-item *ngFor="let dish of dishes">
-      <img matListAvatar src={{dish.image}} alt={{dish.name}}>
-      <h1 matLine> {{dish.name}} </h1>
-      <p matLine>
-        <span> {{dish.description}} </span>
-      </p>
-    </mat-list-item>
-  </mat-list>
+  <div fxFlex>
+    <div>
+      <h3>Menu</h3>
+      <hr>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile *ngFor="let dish of dishes" (click)="onSelectDish()">
+        <img height="200px" src={{dish.image}} alt={{dish.name}}>
+        <mat-grid-tile-footer>
+          <h1>{{dish.name | uppercase}}</h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  
+  <div class="detail">
+    <div class="detail__duma">
+      <img class="detail__img" src="../../assets/img/hotel-1.jpg" alt="hotel-1">
+      <div class="buttons">
+        <button class="button">SHARE</button>
+        <button class="button">LIKE</button>
+        <button class="button">BACK</button>
+      </div>
+    </div>
+    
+    <div class="detail__specific">
+      <h3>Wassup</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, esse perferendis quod hic provident porro, temporibus assumenda totam ipsam, quae asperiores error sapiente quia! Quidem sit placeat enim dignissimos perspiciatis?</p>
+    </div>
+  </div>
 
 </div>

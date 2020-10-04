@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 // ADDITIONAL COMPONENTS
 import { routing } from './app.routing';
@@ -30,6 +31,7 @@ import { MenuComponent } from './menu/menu.component'
     MatToolbarModule,
     FlexLayoutModule,
     MatListModule,
+    MatGridListModule,
     routing
   ],
   providers: [],
