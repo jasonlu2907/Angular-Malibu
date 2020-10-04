@@ -27,7 +27,7 @@
 
   <div fxFlex>
     <mat-grid-list cols="2" rowHeight="200px">
-      <mat-grid-tile *ngFor="let dish of dishes" (click)="onSelectDish()">
+      <mat-grid-tile *ngFor="let dish of dishes" (click)="onSelectDish(dish)">
         <img height="200px" src={{dish.image}} alt={{dish.name}}>
         <mat-grid-tile-footer>
           <h1>{{dish.name | uppercase}}</h1>
@@ -36,9 +36,9 @@
     </mat-grid-list>
   </div>
   
-  <div class="detail">
+  <div class="detail" *ngIf="selectedDish">
     <div class="detail__duma">
-      <img class="detail__img" src="../../assets/img/hotel-1.jpg" alt="hotel-1">
+      <img class="detail__img" src={{selectedDish.image}} alt={{selectedDish.name}}>
       <div class="buttons">
         <button class="button">SHARE</button>
         <button class="button">LIKE</button>
