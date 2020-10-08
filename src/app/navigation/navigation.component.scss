@@ -1,0 +1,30 @@
+.navigation-section {
+  background-color: #eee;
+  padding: 1.5rem 8rem;
+}
+
+.nav-bar {
+  display: flex;
+  font-size: 2rem;
+  text-transform: uppercase;
+  align-items: center;
+
+  &__item {
+    list-style: none;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--color-grey-dark-1);
+    transition: color .2s;
+    padding-bottom: 1.5rem;
+
+    &:hover {
+      color: var(--color-primary-dark);
+      border-bottom: .2rem solid var(--color-primary-dark);
+    }
+  }
+}

@@ -35,7 +35,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-
+  font-family: 'Open Sans';
   background-color: var(--color-primary);
 }
 
@@ -50,7 +50,6 @@ html {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~ROW-GRID~~~~~~~~~~~~~~~~~~~~~~~~~~
 .row {
   max-width: 114rem;
-  // background-color: lightcoral;
   margin: 0 auto; //cho nó ra giữa
 
   &:not(:last-child) {
@@ -62,7 +61,6 @@ html {
 
   // ^= : start with, *= : contain, $= : end with
   [class^="col-"] {
-    // background-color: peru;
     float: left;
 
     &:not(:last-child) {
