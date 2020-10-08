@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatProgressSpinnerModule } from '@angular/material';
 
 // ADDITIONAL COMPONENTS
 import { routing } from './app.routing';
@@ -40,6 +41,7 @@ import { HomeComponent } from './home/home.component'
     FlexLayoutModule,
     MatListModule,
     MatGridListModule,
+    MatProgressSpinnerModule,
     routing
   ],
   providers: [],

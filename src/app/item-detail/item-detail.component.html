@@ -1,1 +1,39 @@
-<p>item-detail works!</p>
+<div>
+  <h3 *ngIf="dish">{{dish.name | uppercase}}</h3>
+  <hr>
+</div>
+<div [hidden]="dish">
+  <h4>Loading . . . Please Wait</h4>
+</div>
+
+<div class="detail" *ngIf="dish">
+  <div class="detail__duma">
+    <img class="detail__img" src={{dish.image}} alt={{dish.name}}>
+    <div class="buttons">
+      <button class="button">SHARE</button>
+      <button class="button">LIKE</button>
+      <button class="button">BACK</button>
+    </div>
+  </div>
+
+  <div class="detail__specific" fxFlex>
+    <!-- <mat-list>
+      <mat-list-item *ngFor="let dish of dishes">
+        <img matListAvatar src={{dish.image}} alt={{dish.name}}>
+        <h1 matLine> {{dish.name}} </h1>
+        <p matLine>
+          <span> {{dish.description}} </span>
+        </p>
+      </mat-list-item>
+    </mat-list>     -->
+    <h1>Comments</h1>
+    <mat-list>
+      <mat-list-item *ngFor="let cmt of dish.comments">
+        <p matLine>{{ cmt.rating }}</p>
+        <p matLine>{{ cmt.comment }}</p>
+        <p matLine>{{ cmt.author }}</p>
+        <p matLine>{{ cmt.date | date }}</p>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

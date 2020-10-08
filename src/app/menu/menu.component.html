@@ -27,8 +27,7 @@
 
   <div fxFlex>
     <mat-grid-list cols="2" rowHeight="200px">
-      <mat-grid-tile *ngFor="let dish of dishes, index as itemId" (click)="onSelectDish(dish)"
-        [routerLink]="['/items', itemId]">
+      <mat-grid-tile *ngFor="let dish of dishes, index as itemId" [routerLink]="['/items', itemId]">
         <img height="200px" src={{dish.image}} alt={{dish.name}}>
         <mat-grid-tile-footer>
           <h1>{{ dish.name | uppercase }}</h1>
@@ -37,7 +36,8 @@
     </mat-grid-list>
   </div>
 
-  <div class="detail" *ngIf="selectedDish">
+  <!-- Truoc khi tao itemDetail -->
+  <!-- <div class="detail" *ngIf="selectedDish">
     <div class="detail__duma">
       <img class="detail__img" src={{selectedDish.image}} alt={{selectedDish.name}}>
       <div class="buttons">
@@ -48,15 +48,6 @@
     </div>
 
     <div class="detail__specific" fxFlex>
-      <!-- <mat-list>
-        <mat-list-item *ngFor="let dish of dishes">
-          <img matListAvatar src={{dish.image}} alt={{dish.name}}>
-          <h1 matLine> {{dish.name}} </h1>
-          <p matLine>
-            <span> {{dish.description}} </span>
-          </p>
-        </mat-list-item>
-      </mat-list>     -->
       <h1>Comments</h1>
       <mat-list>
         <mat-list-item *ngFor="let cmt of selectedDish.comments">
@@ -67,5 +58,5 @@
         </mat-list-item>
       </mat-list>
     </div>
-  </div>
+  </div> -->
 </div>

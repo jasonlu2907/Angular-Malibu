@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit {
       .subscribe(dishes => this.dishes = dishes);
   }
 
-  onSelectDish(dish : Dish) {
-    this.selectedDish = dish;
-  }
+  // onSelectDish(dish : Dish) {
+  //   this.selectedDish = dish;
+  // }
 }

@@ -1,0 +1,41 @@
+.detail {
+  width: 100%;
+  padding: 0;
+  margin: 2rem auto;
+  display: flex;
+
+  &__duma {
+    flex: 0 0 50%;
+
+    .buttons {
+      button {
+        background-color: #ddd;
+        border: 1px solid rgba(0, 0, 0, 0.13);
+        border-radius: 0.3rem;
+        box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        padding: 1rem 3rem;
+        transition: all 0.2s;
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        &:hover {
+          background-color: #fff;
+          box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1);
+
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 35rem;
+    flex: 0 0 50%;
+  }
+
+  &__specific {
+    margin-left: 5rem;
+  }
+}
