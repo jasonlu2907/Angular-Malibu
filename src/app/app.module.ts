@@ -19,7 +19,8 @@ import { ItemsComponent } from './items/items.component';
 import { MenuComponent } from './menu/menu.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { FooterComponent } from './footer/footer.component';
-import { NavigationComponent } from './navigation/navigation.component'
+import { NavigationComponent } from './navigation/navigation.component';
+import { HomeComponent } from './home/home.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { NavigationComponent } from './navigation/navigation.component'
     MenuComponent,
     ItemDetailComponent,
     FooterComponent,
-    NavigationComponent
+    NavigationComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

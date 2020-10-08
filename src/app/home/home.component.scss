@@ -1,0 +1,117 @@
+.home-section {
+  max-width: 120rem;
+  background-color: #fff;
+}
+
+.begin {
+  height: 90vh;
+  // color: rgba(var(--color-primary-dark), 0.5);
+  background-image: linear-gradient(
+      to right,
+      var(--color-grey-light-3-opa),
+      var(--color-grey-light-4-opa)
+    ),
+    url(../../assets/img/food-img.jpg);
+  background-size: cover;
+  background-position: top;
+  text-transform: uppercase;
+
+  position: relative;
+
+  &__text-box {
+    // background-color: rgba(255, 255, 255, 0.541);
+    width: 70%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.heading-primary {
+  color: rgba(255, 255, 255, 0.733);
+  margin-bottom: 5rem;
+
+  &__main {
+    display: block;
+    text-align: center;
+    font-size: 6.5rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+
+    animation: moveInLeft 1s ease-out;
+
+  }
+
+  &__sub {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.7rem;
+    animation: moveInRight 1s ease-out;
+
+  }
+}
+
+.btn {
+  background-color: rgba(204, 204, 204, 0.637);
+  color: rgba(255, 255, 255, 0.733);
+  border: none;
+  border-radius: 5rem;
+  padding: 1.5rem 4rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  display: inline-block;
+
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: moveInBottom 1.2s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+  }
+
+  80% {
+      transform: translateX(1rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(10rem);
+  }
+
+  80% {
+      transform: translateX(-1rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(3rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-50%);
+  }
+}
