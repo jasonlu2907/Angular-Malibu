@@ -1,0 +1,89 @@
+// @mixin clearfix {
+//   &::after {
+//       content: "";
+//       display: table;
+//       clear: both;    
+//   }
+// }
+
+// .row {
+//   max-width: 114rem;
+//   // background-color: lightcoral;
+//   margin: 0 auto; //cho nó ra giữa
+
+//   &:not(:last-child) {
+//       margin-bottom: 8rem; //gutter-vertical
+//   }
+
+//   // sau khi declare float left thì các element trong row sẽ floated, row trên sẽ collapse với row dưới
+//   @include clearfix;
+
+//   // ^= : start with, *= : contain, $= : end with
+//   [class^="col-"] {
+//       // background-color: peru;
+//       float: left;
+
+//       &:not(:last-child) {
+//           margin-right: 6rem; //gutter-horizontal
+//       }
+//   }
+
+//   .col-1-of-2 {
+//       width: calc((100% - #{6rem}) / 2);
+//       //using attribute selector START WITH "col-"
+      
+//   }
+// }
+
+.section-footer {
+  padding: 4rem 0;
+  background-color: #333;
+  // color: rgba($color-white, 0.9);
+  font-size: 1.5rem;
+}
+
+.footer {
+  &__navigator {
+      display: inline-block;
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.801);
+  }
+
+  &__list {
+      list-style: none;
+  }
+
+  &__item {
+      display: inline-block;
+      &:not(:last-child) {
+          padding-right: 2rem;
+      }
+  }
+
+  &__link {
+      
+      &:link,
+      &:visited {
+          color: var(--color-grey-light-1);
+          text-decoration: none;
+          text-transform: uppercase;
+          display: inline-block;
+          transition: all 0.2s;
+      }
+
+      &:hover,
+      &:active {
+          transform: scale(1.2) rotate(5deg);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.39);
+          color: var(--color-primary);
+      }
+  }
+
+  &__copyright {
+      color: #777;
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.808);
+      width: 80%;
+      float: right;
+  }
+}
