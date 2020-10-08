@@ -16,13 +16,17 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ItemsComponent } from './items/items.component';
-import { MenuComponent } from './menu/menu.component'
+import { MenuComponent } from './menu/menu.component';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
+import { FooterComponent } from './footer/footer.component'
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ItemsComponent,
-    MenuComponent
+    MenuComponent,
+    ItemDetailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
