@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "malibu-28e28"
+  },
+  "targets": {
+    "malibu-28e28": {
+      "hosting": {
+        "malibu": [
+          "malibu-28e28"
+        ]
+      }
+    }
+  }
+}

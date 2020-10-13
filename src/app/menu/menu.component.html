@@ -25,6 +25,10 @@
     </div>
   </div>
 
+  <div [hidden]="dishes">
+    <h4>Loading . . . Please Wait</h4>
+  </div>
+
   <div fxFlex>
     <mat-grid-list cols="2" rowHeight="200px">
       <mat-grid-tile *ngFor="let dish of dishes, index as itemId" [routerLink]="['/items', itemId]">
