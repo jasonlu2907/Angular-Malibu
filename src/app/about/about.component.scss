@@ -1,0 +1,128 @@
+.about-section {
+  // padding: 10rem 0;
+  h1 {
+    padding: 2rem;
+  }
+
+  &__top {
+    padding: 4rem 0;
+    background-color: #dcbc99;
+    padding-left: 2rem;
+
+    h2 {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: var(--color-font);
+
+    }
+    p {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--color-grey-dark-1);
+    }
+  }
+
+  &__bottom {
+    padding: 5rem 0;
+    background-color: #c7d2dc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .text-box {
+      line-height: 1.29;
+      text-align: center;
+      width: 55%;
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 600;
+        color: #4d4d4d;
+      }
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #666;
+      }
+    }
+
+    button {
+      padding: 1rem 3rem;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 2px;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      color: var(--color-grey-light-1);
+      cursor: pointer;
+      background-color: #3973e6;
+
+      transition: all 0.2s;
+      &:hover {
+        background-color: #275dc7;
+        transform: translateY(-0.5rem);
+      }
+      &:active {
+        transform: translateY(-0.2rem);
+        box-shadow: 0 1rem 1.6rem rgba(0, 0, 0, 0.1);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__middle {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 4rem 10rem;
+
+    .part {
+      background-color: #fff;
+      line-height: 1.75;
+
+      img {
+        width: 3.5rem;
+      }
+
+      h3 {
+        margin-bottom: 1rem;
+        color: var(--color-font);
+
+      }
+
+      p {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #666;
+
+        a {
+          text-decoration: none;
+          color:#3973e6;
+          transition: color .2s;
+          font-size: 1.5rem;
+
+          &:hover {
+            color: #275dc7;
+          }
+        }
+
+        
+      }
+    }
+  }
+}
+
+
+.heading {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--color-font);
+
+  padding: 5rem 0 3rem 0;
+}
