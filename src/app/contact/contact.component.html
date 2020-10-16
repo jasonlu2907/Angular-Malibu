@@ -2,20 +2,20 @@
   <h1>Contact Us</h1>
   <h3>Question not answered yet? We are here to help!</h3>
 
-  <form class="contact-form">
+  <form [formGroup]="form" class="contact-form">
     <div class="contact-form__input">
       <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Your Name">
+      <input type="text" id="name" placeholder="Your Name" formControlName="name">
     </div>
 
     <div class="contact-form__input">
       <label for="email">E-mail</label>
-      <input type="text" id="email" placeholder="Your E-mail">
+      <input type="text" id="email" placeholder="Your E-mail" formControlName="email">
     </div>
 
     <div class="contact-form__input">
       <label for="phone">Phone Number</label>
-      <input type="text" id="phone" placeholder="Your Phone Number">
+      <input type="text" id="phone" placeholder="Your Phone Number" formControlName="phone">
     </div>
 
     <div class="contact-form__textarea">
