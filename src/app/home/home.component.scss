@@ -139,6 +139,7 @@
     var(--color-grey-light-4-opa)
   ), url(../../assets//img/nat-4.jpg);
   background-size: auto;
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
 
   &-box {
     background-color: rgba(204, 204, 204, 0.637);

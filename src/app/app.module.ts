@@ -20,7 +20,8 @@ import { MenuComponent } from './menu/menu.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { HomeComponent } from './home/home.component'
     ItemDetailComponent,
     FooterComponent,
     NavigationComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
