@@ -3,7 +3,7 @@
   <h3>Question not answered yet? We are here to help!</h3>
 
   <h3>Send us your Feedback</h3>
-  <p>{{ form.value | json }} {{ form.status | json }}</p>
+  <p style="text-align: center;">{{ form.value | json }} {{ form.status | json }}</p>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()" class="contact-form">
     <div class="contact-form__input">
@@ -25,7 +25,7 @@
       <textarea formControlName="message" placeholder="Your Feedback" rows=12></textarea>
     </div>
 
-    <button class="contact-form__button" type="submit">Submit</button>
+    <button [disabled]="form.invalid" type="submit" class="contact-form__button">Submit</button>
   </form>
 
 </section>

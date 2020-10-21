@@ -22,6 +22,19 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Deploy to Firebase
+
+- `firebase login`
+- Create your new project
+- `firebase init`
+
+1. Hosting for question 1
+2. Choose your project to link this app
+3. If you press enter, by default it will create a **public** folder, make sure to keep all your files in this folder (Có nguồn nó để folder **dist** làm public)
+4. Configure as single-page app (_no_). Don't know when to place yes to this
+5. `ng add @angular/fire`
+6. `firebase deploy`
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
