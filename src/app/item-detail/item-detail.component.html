@@ -10,9 +10,11 @@
   <div class="detail__duma">
     <img class="detail__img" src={{dish.image}} alt={{dish.name}}>
     <div class="buttons">
+      <button [routerLink]="['/items', prev]" class="button">&larr; PREV</button>
       <button class="button">SHARE</button>
       <button class="button">LIKE</button>
       <button class="button" (click)="goBack()">BACK</button>
+      <button [routerLink]="['/items', next]" class="button">NEXT &rarr;</button>
     </div>
   </div>
 

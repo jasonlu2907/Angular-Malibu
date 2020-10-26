@@ -9,16 +9,19 @@
     <div class="contact-form__input">
       <label for="name">Name</label>
       <input type="text" id="name" placeholder="Your Name" formControlName="name" required>
+      <p *ngIf="form.get('name').hasError('required') && form.get('name').touched" class="error">Name is required</p>
     </div>
 
     <div class="contact-form__input">
       <label for="email">E-mail</label>
       <input type="text" id="email" placeholder="Your E-mail" formControlName="email" required>
+      <p *ngIf="form.get('email').hasError('required') && form.get('email').touched" class="error">Email ID is required</p>
     </div>
 
     <div class="contact-form__input">
       <label for="phone">Phone Number</label>
       <input type="text" id="phone" placeholder="Your Phone Number" formControlName="phone" required>
+      <p *ngIf="form.get('phone').hasError('required') && form.get('phone').touched" class="error">Phone Number is required</p>
     </div>
 
     <div class="contact-form__textarea">

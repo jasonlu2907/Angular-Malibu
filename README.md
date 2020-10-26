@@ -33,7 +33,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 3. If you press enter, by default it will create a **public** folder, make sure to keep all your files in this folder (Có nguồn nó để folder **dist** làm public)
 4. Configure as single-page app (_no_). Don't know when to place yes to this
 5. `ng add @angular/fire`
-6. `firebase deploy`
+6. `ng deploy`
 
 ## Further help
 
