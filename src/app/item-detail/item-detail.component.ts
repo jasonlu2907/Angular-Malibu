@@ -4,6 +4,8 @@ import { Location } from '@angular/common';
 
 import { Dish } from '../share/dish';
 import { DishService } from '../services/dish.service';
+import { CartService } from '../services/cart.service';
+
 import { switchMap } from 'rxjs/operators';
 
 @Component({
@@ -21,7 +23,8 @@ export class ItemDetailComponent implements OnInit {
   
   constructor(private dishService: DishService,
     private route: ActivatedRoute,
-    private location: Location) {
+    private location: Location,
+    private cartService: CartService) {
       
     }
 
@@ -50,6 +53,10 @@ export class ItemDetailComponent implements OnInit {
     const index = this.dishIds.indexOf(dishID);
     this.prev = this.dishIds[(this.dishIds.length + index - 1) % this.dishIds.length];
     this.next = this.dishIds[(this.dishIds.length + index + 1) % this.dishIds.length];
+  }
+
+  addToCart(product) {
+    this.cartService.addToCart(product);
   }
 
 }

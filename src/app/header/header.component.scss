@@ -94,6 +94,10 @@
 
   &__icon-box {
     position: relative;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__icon {

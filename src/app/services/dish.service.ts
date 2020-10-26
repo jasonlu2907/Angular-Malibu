@@ -11,6 +11,7 @@ import { delay } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DishService {
+  items: Dish[] = [];
 
   constructor() { }
 
@@ -29,4 +30,5 @@ export class DishService {
   getDish(id: string): Observable<Dish> {
     return of(DISHES.filter(dish => dish.id === id)[0]).pipe(delay(1000));
   }
+
 }
