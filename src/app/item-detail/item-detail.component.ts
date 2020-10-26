@@ -55,7 +55,7 @@ export class ItemDetailComponent implements OnInit {
     this.next = this.dishIds[(this.dishIds.length + index + 1) % this.dishIds.length];
   }
 
-  addToCart(product) {
+  addToCart(product: Dish) {
     this.cartService.addToCart(product);
   }
 

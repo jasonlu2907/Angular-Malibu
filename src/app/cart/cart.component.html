@@ -10,14 +10,14 @@
         </div>
 
         <h3 class="heading-tertirary">
-          <span>The Forest Hiker</span>
+          <span>{{item.name}}</span>
         </h3>
       </div>
 
       <div class="card__details">
-        <h4 class="card__sub-heading">Easy 5-day tour</h4>
+        <h4 class="card__sub-heading">{{item.highlight}}</h4>
         <p class="card__text">
-          Breathtaking hike through the Canadian Banff National Park
+          {{item.description}}
         </p>
         <!-- <div class="card__data">
           <svg class="card__icon">
@@ -47,11 +47,11 @@
 
       <div class="card__footer">
         <p>
-          <span class="card__footer-value">$297</span>
-          <span class="card__footer-text">per person</span>
+          <span class="card__footer-value">${{item.price}} </span>
+          <span class="card__footer-text">per dish</span>
         </p>
         <p class="card__ratings">
-          <span class="card__footer-value">4.9</span>
+          <span class="card__footer-value">4.9 </span>
           <span class="card__footer-text">rating (21)</span>
         </p>
         <a href="#" class="btn btn--green btn--small">Details</a>

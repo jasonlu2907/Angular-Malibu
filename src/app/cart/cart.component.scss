@@ -2,6 +2,7 @@ main {
   margin: 5rem auto;
 }
 
+// CARD LAYOUT COMPONENT DESIGN
 .card-container {
   max-width: 120rem;
   margin: 0 auto;
@@ -11,12 +12,13 @@ main {
 }
 
 .card {
+  margin: 0 3rem;
   border-radius: 3px;
   overflow: hidden;
-  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
   transition: 0.3s all;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -27,16 +29,19 @@ main {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+
+  &__header {
+    position: relative;
+  }
+
+  &__picture {
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+    clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+    height: 22rem;
+  }
 }
-.card__header {
-  position: relative;
-}
-.card__picture {
-  position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
-  clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
-  height: 22rem;
-}
+
 .card__picture-overlay {
   position: absolute;
   width: 100%;
@@ -45,10 +50,10 @@ main {
     linear,
     left top,
     right bottom,
-    from(#7dd56f),
-    to(#28b487)
+    from(#6f79d5),
+    to(#5928b4)
   );
-  background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
+  background-image: linear-gradient(to right bottom,var(--color-primary-dark), var(--color-primary-light));
   opacity: 0.7;
 }
 .card__picture-img {
@@ -72,7 +77,8 @@ main {
 }
 .card__text {
   grid-column: 1 / -1;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 100;
   font-style: italic;
   margin-top: -1rem;
   margin-bottom: 0.75rem;
@@ -85,9 +91,9 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-.card__data svg {
-  margin-right: 0.7rem;
+  svg {
+    margin-right: 0.7rem;
+  }
 }
 .card__icon {
   height: 2rem;
@@ -104,12 +110,15 @@ main {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   margin-top: auto;
-}
-.card__footer-value {
-  font-weight: 700;
-}
-.card__footer-text {
-  color: #999;
+
+  &-value {
+    font-weight: 700;
+  }
+
+  &-text {
+    color: #999;
+    font-weight: 100;
+  }
 }
 .card__ratings {
   grid-row: 2 / 3;
@@ -120,4 +129,41 @@ main {
   justify-self: end;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+/* ``````TYPOGRAPHY''''''''' */
+.heading-primary,
+.heading-tertirary {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.heading-primary span,
+.heading-tertirary span {
+  padding: 1rem 1.5rem;
+  line-height: 1;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba(125, 213, 111, 0.85)),
+    to(rgba(40, 180, 135, 0.85))
+  );
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 102, 10, 0.85),
+    rgba(252, 136, 66, 0.85)
+  );
+}
+
+.heading-tertirary {
+  font-size: 2.75rem;
+  text-align: right;
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  width: 70%;
+  z-index: 10;
 }
