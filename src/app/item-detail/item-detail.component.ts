@@ -31,13 +31,15 @@ export class ItemDetailComponent implements OnInit {
     // this.dishService.getDish(id.toString())
     //                     .subscribe(dish => {this.dish = dish; this.setPrevNext(dish.id);});
   
-    this.dishService.getDishIds().subscribe(dishIds => this.dishIds = dishIds);
+    /**Refactor the code above => PREV, NEXT comes in */
+    this.dishService.getDishIds()
+      .subscribe(dishIds => this.dishIds = dishIds);
     this.route.params
-    .pipe(switchMap((params: Params) => this.dishService.getDish(params['itemId'])))
-      .subscribe(dish => { 
-        this.dish = dish; 
-        this.setPrevNext(dish.id); 
-      });
+      .pipe(switchMap((params: Params) => this.dishService.getDish(params['itemId'])))
+        .subscribe(dish => { 
+          this.dish = dish; 
+          this.setPrevNext(dish.id); 
+        });
   }
 
   goBack() {
