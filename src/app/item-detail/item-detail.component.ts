@@ -30,9 +30,9 @@ export class ItemDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private cartService: CartService,
-    private feedbackForm: FormBuilder) {
+    private formBuilder: FormBuilder) {
       // Khai bao cung datatype kieu Comment
-      this.form = this.feedbackForm.group({
+      this.form = this.formBuilder.group({
         author: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
         comment: ['', [Validators.minLength(5), Validators.maxLength(50)]],
         rating: 5
@@ -43,7 +43,7 @@ export class ItemDetailComponent implements OnInit {
     /**Lay tham so id duoc truyen vao */
     // const id = +this.route.snapshot.params['itemId'];
     // this.dishService.getDish(id.toString())
-    //                     .subscribe(dish => {this.dish = dish; this.setPrevNext(dish.id);});
+    //                     .subscribe(dish => {this.dish = dish;});
   
     /**Refactor the code above => PREV, NEXT comes in */
     this.dishService.getDishIds()
@@ -76,10 +76,12 @@ export class ItemDetailComponent implements OnInit {
 
     // Adding comment
     this.dish.comments.push(this.comment);
-    console.log(this.feedbackForm);
+    console.log(this.form);
+    console.log(this.form.value);
+
 
     this.form.reset({
-      name: '',
+      author: '',
       comment: '',
       rating: 5
     });
