@@ -43,3 +43,49 @@ h3 {
     margin-left: 5rem;
   }
 }
+
+.comment-section {
+  padding: 8rem 2rem;
+
+  &__input {
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+    input {
+      padding: 1rem 2.5rem;
+      margin-left: 2rem;
+      font: inherit;
+      font-size: 1.1rem;
+    }
+    textarea {
+      padding: 1rem 2.5rem;
+      font: inherit;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__button {
+    padding: 1.5rem 2.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    color:  var(--color-font);
+    background-color: rgba(255, 255, 255, 0.582);
+    font-weight: 600;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-0.7rem);
+      box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      transform: translateY(0.2rem);
+      box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

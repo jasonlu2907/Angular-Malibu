@@ -55,7 +55,7 @@ main {
     // background-image: linear-gradient(to right bottom,var(--color-primary-dark), var(--color-primary-light));
     opacity: 0.7;
   }
-  
+
   &__picture-img {
     -o-object-fit: cover;
     object-fit: cover;
@@ -131,7 +131,6 @@ main {
     grid-row: 2 / 3;
   }
 }
-
 
 .card .btn-small,
 .card .btn {

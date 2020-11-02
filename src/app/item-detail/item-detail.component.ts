@@ -8,6 +8,7 @@ import { CartService } from '../services/cart.service';
 
 import { switchMap } from 'rxjs/operators';
 
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-item-detail',
   templateUrl: './item-detail.component.html',
@@ -21,11 +22,16 @@ export class ItemDetailComponent implements OnInit {
   prev: string;
   next: string;
   
+  form: FormGroup;
   constructor(private dishService: DishService,
     private route: ActivatedRoute,
     private location: Location,
-    private cartService: CartService) {
-      
+    private cartService: CartService,
+    private feedbackForm: FormBuilder) {
+      this.form = this.feedbackForm.group({
+        name: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]],
+        comment: ['', [Validators.minLength(5), Validators.maxLength(50)]]
+      });
     }
 
   ngOnInit(): void {
@@ -57,6 +63,15 @@ export class ItemDetailComponent implements OnInit {
 
   addToCart(product: Dish) {
     this.cartService.addToCart(product);
+  }
+
+  onSubmit() {
+    this.feedbackForm = this.form.value;
+    console.log(this.feedbackForm);
+    this.form.reset({
+      name: '',
+      comment: ''
+    });
   }
 
 }

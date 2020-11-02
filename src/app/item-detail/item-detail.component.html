@@ -16,6 +16,21 @@
       <button class="button" (click)="goBack()">BACK</button>
       <button [routerLink]="['/items', next]" class="button">NEXT &rarr;</button>
     </div>
+
+    <div class="comment-section">
+      <form [formGroup]="form" (submit)="onSubmit()">
+        <div class="comment-section__input">
+          <label for="name">Name</label>
+          <input formControlName="name" type="text" placeholder="Your Name" id="name" required>
+          <p *ngIf="form.get('name').hasError('required') && form.get('name').touched" class="error">Name is required</p>
+        </div>
+    
+        <div class="comment-section__input">
+          <textarea formControlName="comment" placeholder="Add a comment" rows=6 cols="30"></textarea>
+        </div>
+        <button [disabled]="form.invalid" type="submit" class="comment-section__button">Submit</button>      
+      </form>
+    </div>
   </div>
 
   <div class="detail__specific" fxFlex>
@@ -31,11 +46,12 @@
     <h1>Comments</h1>
     <mat-list>
       <mat-list-item *ngFor="let cmt of dish.comments">
-        <p matLine>{{ cmt.rating }}</p>
+        <p matLine>{{ cmt.rating }} stars</p>
         <p matLine>{{ cmt.comment }}</p>
-        <p matLine>{{ cmt.author }}</p>
-        <p matLine>{{ cmt.date | date }}</p>
+        <p matLine>-- {{ cmt.author }}</p>
+        <p matLine>{{ cmt.date | date:'medium' }}</p>
       </mat-list-item>
     </mat-list>
   </div>
 </div>
+
