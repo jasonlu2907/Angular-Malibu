@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSliderModule } from '@angular/material/slider';
 
 // ADDITIONAL COMPONENTS
 import { routing } from './app.routing';
@@ -49,6 +50,7 @@ import { CartComponent } from './cart/cart.component';
     FlexLayoutModule,
     MatListModule,
     MatGridListModule,
+    MatSliderModule,
     routing
   ],
   providers: [],

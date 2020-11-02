@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { Dish } from '../share/dish';
+import { Comment } from '../share/comment';
 import { DishService } from '../services/dish.service';
 import { CartService } from '../services/cart.service';
 
@@ -23,14 +24,18 @@ export class ItemDetailComponent implements OnInit {
   next: string;
   
   form: FormGroup;
+  comment: Comment;
+
   constructor(private dishService: DishService,
     private route: ActivatedRoute,
     private location: Location,
     private cartService: CartService,
     private feedbackForm: FormBuilder) {
+      // Khai bao cung datatype kieu Comment
       this.form = this.feedbackForm.group({
-        name: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]],
-        comment: ['', [Validators.minLength(5), Validators.maxLength(50)]]
+        author: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
+        comment: ['', [Validators.minLength(5), Validators.maxLength(50)]],
+        rating: 5
       });
     }
 
@@ -66,11 +71,17 @@ export class ItemDetailComponent implements OnInit {
   }
 
   onSubmit() {
-    this.feedbackForm = this.form.value;
+    this.comment = this.form.value;
+    this.comment.date = new Date().toISOString();
+
+    // Adding comment
+    this.dish.comments.push(this.comment);
     console.log(this.feedbackForm);
+
     this.form.reset({
       name: '',
-      comment: ''
+      comment: '',
+      rating: 5
     });
   }
 

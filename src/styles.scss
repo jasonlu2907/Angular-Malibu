@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 :root {
   --color-primary: #fd7d31;
   --color-primary-dark:#ff660a;
@@ -109,4 +111,10 @@ html {
       (3 * (100% - 3 * #{6rem}) / 4) + 2 * #{6rem}
     );
   }
+}
+
+// Muốn sửa Angular Material thì phải sửa ở nơi import nó (ý là ngoài đây) ko sửa
+// trong component đc
+.mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label, .mat-accent .mat-slider-track-fill {
+  background-color: #ff9640;
 }
