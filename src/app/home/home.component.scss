@@ -3,6 +3,7 @@
   background-color: #fff;
 }
 
+//---------------- BEGIN SECTION --------------------
 .begin {
   height: 90vh;
   // color: rgba(var(--color-primary-dark), 0.5);
@@ -81,6 +82,19 @@
   &:focus {
     outline: none;
   }
+
+  &-text {
+    color: #fd6a02;
+    text-decoration: none;
+    padding: 1rem 0.2rem;
+    border-bottom: 1px solid #fd6a02;
+
+    &:hover {
+      color: white;
+      background-color: #fd6a02;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.13);
+    }
+  }
 }
 
 @keyframes moveInLeft {
@@ -127,6 +141,92 @@
   }
 }
 
+//------------------ ABOUT SECTION --------------------
+.section-about {
+  padding: 10rem 0;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-primary-dark)
+  );
+
+  // Cắt cái màu của bg-image vô text
+  -webkit-background-clip: text;
+  // TRONG SUỐT. -đéo biết, có cái này thì nó ms chạy được :)
+  color: transparent;
+
+  transition: all 0.2s;
+
+  &:hover {
+    transform: skewY(2deg) skewX(5deg);
+    text-shadow: 0.3rem 1rem 2rem rgba(0, 0, 0, 0.342); //X Y blur
+  }
+}
+
+.about {
+  max-width: 114rem;
+  margin: 0 auto; //cho nó ra giữa
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 4rem;
+  justify-content: center;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  // margin-bottom: 1rem;
+}
+
+.composition {
+  position: relative;
+
+  &__photo {
+    width: 28rem;
+    height: 30rem;
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.3);
+    position: absolute;
+
+    &--1 {
+      top: -3rem;
+      z-index: 1;
+    }
+
+    &--2 {
+      right: 2rem;
+      z-index: 2;
+    }
+    &--3 {
+      top: 10rem;
+      left: 30%;
+      z-index: 3;
+    }
+
+    @media only screen and (max-width: 950px) {
+      position: static;
+    }
+  }
+}
+
+//------------------ FEATURE SECTION ------------------
+.feature-boxes {
+  max-width: 114rem;
+  margin: 0 auto; //cho nó ra giữa
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 4rem;
+  justify-content: center;
+}
+
 .feature {
   margin: 10rem 0;
   padding: 20rem 0;
@@ -169,12 +269,4 @@
   margin-bottom: 1.5rem;
 }
 
-.row {
-  max-width: 114rem;
-  margin: 0 auto; //cho nó ra giữa
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  column-gap: 2rem;
-  row-gap: 4rem;
-  justify-content: center;
-}
+
