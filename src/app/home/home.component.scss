@@ -17,7 +17,6 @@
   text-transform: uppercase;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
-
   position: relative;
 
   &__text-box {
@@ -42,7 +41,6 @@
     letter-spacing: 3.5rem;
 
     animation: moveInLeft 1s ease-out;
-
   }
 
   &__sub {
@@ -52,7 +50,6 @@
     font-weight: 600;
     letter-spacing: 0.7rem;
     animation: moveInRight 1s ease-out;
-
   }
 }
 
@@ -70,10 +67,10 @@
   position: absolute;
   top: 60%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   animation: moveInBottom 1.2s ease-out;
 
-  transition: all .2s;
+  transition: all 0.2s;
 
   &:hover {
     transform: translate(-50%, -2rem);
@@ -88,45 +85,45 @@
 
 @keyframes moveInLeft {
   0% {
-      opacity: 0;
-      transform: translateX(-10rem);
+    opacity: 0;
+    transform: translateX(-10rem);
   }
 
   80% {
-      transform: translateX(1rem);
+    transform: translateX(1rem);
   }
 
   100% {
-      opacity: 1;
-      transform: translate(0);
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
 @keyframes moveInRight {
   0% {
-      opacity: 0;
-      transform: translateX(10rem);
+    opacity: 0;
+    transform: translateX(10rem);
   }
 
   80% {
-      transform: translateX(-1rem);
+    transform: translateX(-1rem);
   }
 
   100% {
-      opacity: 1;
-      transform: translate(0);
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
 @keyframes moveInBottom {
   0% {
-      opacity: 0;
-      transform: translateX(-50%) translateY(3rem);
+    opacity: 0;
+    transform: translateX(-50%) translateY(3rem);
   }
 
   100% {
-      opacity: 1;
-      transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%);
   }
 }
 
@@ -134,10 +131,11 @@
   margin: 10rem 0;
   padding: 20rem 0;
   background-image: linear-gradient(
-    to right,
-    var(--color-grey-light-3-opa),
-    var(--color-grey-light-4-opa)
-  ), url(../../assets//img/nat-4.jpg);
+      to right,
+      var(--color-grey-light-3-opa),
+      var(--color-grey-light-4-opa)
+    ),
+    url(../../assets//img/nat-4.jpg);
   background-size: auto;
   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
 
@@ -145,11 +143,11 @@
     background-color: rgba(204, 204, 204, 0.637);
     padding: 1.5rem;
     text-align: center;
-    transition: all .5s;
+    transition: all 0.5s;
     &__icon {
       width: 4.5rem;
       height: 4.5rem;
-      fill:  rgba(255, 255, 255, 0.733);
+      fill: rgba(255, 255, 255, 0.733);
       margin: 2rem 0;
     }
 
@@ -169,4 +167,14 @@
   font-weight: 600;
   font-size: 1.65rem;
   margin-bottom: 1.5rem;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; //cho nó ra giữa
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 4rem;
+  justify-content: center;
 }

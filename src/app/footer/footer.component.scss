@@ -35,6 +35,16 @@
 //   }
 // }
 
+.row {
+  max-width: 114rem;
+  margin: 0 auto; //cho nó ra giữa
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 4rem;
+  justify-items: center;
+}
+
 .section-footer {
   padding: 4rem 0 3rem 0;
   background-color:var(--color-grey-darker-beauty);
@@ -46,7 +56,7 @@
   &__navigator {
       display: inline-block;
       padding: 2rem 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.801);
+      border-top: 1px solid rgba(255, 255, 255, 0.7);
   }
 
   &__list {
@@ -82,7 +92,7 @@
   &__copyright {
       color: #777;
       padding: 2rem 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.808);
+      border-top: 1px solid rgba(255, 255, 255, 0.7);
       width: 80%;
       float: right;
   }

@@ -62,7 +62,7 @@ html {
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~ROW-GRID~~~~~~~~~~~~~~~~~~~~~~~~~~
-.row {
+/*.row {
   max-width: 114rem;
   margin: 0 auto; //cho nó ra giữa
 
@@ -111,7 +111,7 @@ html {
       (3 * (100% - 3 * #{6rem}) / 4) + 2 * #{6rem}
     );
   }
-}
+}*/
 
 // Muốn sửa Angular Material thì phải sửa ở nơi import nó (ý là ngoài đây) ko sửa
 // trong component đc
