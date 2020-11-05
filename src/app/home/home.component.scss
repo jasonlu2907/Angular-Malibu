@@ -88,6 +88,7 @@
     text-decoration: none;
     padding: 1rem 0.2rem;
     border-bottom: 1px solid #fd6a02;
+    transition: all .3s;
 
     &:hover {
       color: white;
@@ -153,8 +154,8 @@
   letter-spacing: 0.3rem;
   display: inline-block;
   background-image: linear-gradient(
-    to right,
-    var(--color-primary),
+    to right bottom,
+    var(--color-primary-light),
     var(--color-primary-dark)
   );
 

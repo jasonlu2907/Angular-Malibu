@@ -54,8 +54,9 @@
           <span class="card__footer-value">4.9 </span>
           <span class="card__footer-text">rating (21)</span>
         </p>
-        <a href="#" class="btn btn--green btn--small">Details</a>
+        <a [routerLink]="['/items', item.id]" class="btn btn--small">Details</a>
       </div>
+
     </div>
   </div>
 </main>
