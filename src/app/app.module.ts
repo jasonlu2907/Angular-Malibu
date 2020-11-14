@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 // DECORATE MODULE
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -51,6 +52,9 @@ import { CartComponent } from './cart/cart.component';
     MatListModule,
     MatGridListModule,
     MatSliderModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBuTAaTllMKYMSwtVLX9ivnsqCsUOoZr6A'
+    }),
     routing
   ],
   providers: [],
