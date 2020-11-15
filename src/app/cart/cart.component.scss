@@ -31,6 +31,10 @@ main {
   -ms-flex-direction: column;
   flex-direction: column;
 
+  &:hover {
+    transform: translateY(-.7rem);
+  }
+
   &__header {
     position: relative;
   }
@@ -162,6 +166,7 @@ main {
   }
 }
 
+
 /* ``````TYPOGRAPHY''''''''' */
 .heading-primary,
 .heading-tertirary {
@@ -197,4 +202,25 @@ main {
   right: 2rem;
   width: 70%;
   z-index: 10;
+}
+
+.remove {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  
+  &__btn {
+    display: inline-block;
+    color: var(--color-font);
+    padding: .5rem 1rem;
+    border: 1px solid var(--color-font);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+      transform: translateY(.8rem);
+    }
+  }
+
 }

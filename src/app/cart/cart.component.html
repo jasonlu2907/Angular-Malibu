@@ -1,6 +1,6 @@
 <main class="main">
   <div class="card-container">
-    <div *ngFor="let item of items" class="card">
+    <div *ngFor="let item of items; index as i" class="card">
       <div class="card__header">
         <div class="card__picture">
           <div class="card__picture-overlay">&nbsp;</div>
@@ -55,6 +55,10 @@
           <span class="card__footer-text">rating (21)</span>
         </p>
         <a [routerLink]="['/items', item.id]" class="btn btn--small">Details</a>
+      </div>
+
+      <div class="remove">
+        <a class="remove__btn" (click)="removeItem(i)">X</a>
       </div>
 
     </div>
