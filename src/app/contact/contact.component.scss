@@ -4,6 +4,51 @@
   padding-bottom: 5rem;
 }
 
+.content {
+  display: grid;
+  // Để auto-fit là ko có set cố định các thành phần trong grid
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+
+  /*&-left { FORM
+    // grid-column: 1 / 2;
+  }*/
+
+  &-right {
+    // grid-column: 2 / 3;
+    justify-self: center;
+    #female-file,
+    #male-file {
+      animation: goUp 2s infinite linear;
+    }
+
+    #female,
+    #male {
+      animation: people 2s infinite alternate;
+    }
+
+    @keyframes goUp {
+      0% {
+        transform: translateY(-1rem);
+      }
+      80% {
+        transform: translateY(0.2rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    @keyframes people {
+      from {
+        transform: rotateY(-10deg);
+      }
+      to {
+        transform: rotateY(0deg);
+
+      }
+    }
+  }
+}
+
 h1 {
   font-size: 4.2rem;
   font-weight: 400;
@@ -34,7 +79,7 @@ h3 {
     }
 
     input {
-      width: 40%;
+      width: 80%;
       height: 5rem;
       border: 1px solid rgba(0, 0, 0, 0.1);
       padding: 1rem 2.5rem;
@@ -43,7 +88,7 @@ h3 {
 
   &__textarea {
     textarea {
-      width: 40%;
+      width: 80%;
       border: 1px solid rgba(0, 0, 0, 0.1);
       padding: 1rem 2.5rem;
       font-size: 1.6rem;
