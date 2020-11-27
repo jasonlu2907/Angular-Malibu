@@ -9,12 +9,12 @@ import { CartService } from '../services/cart.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  items: Dish[];
+  items: Dish[] = this.cartService.getItems();
   
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.items = this.cartService.getItems();
+    // this.items = this.cartService.getItems();
   }
 
   removeItem(ind: number) {
